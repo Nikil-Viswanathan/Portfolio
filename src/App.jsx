@@ -188,10 +188,10 @@ function About() {
       <div className="about-grid">
         <div className="glass-card about-text reveal">
           <p>
-            Undergraduate Computer Science student at Mahindra University with hands-on experience in software
-            development, data analytics, and systems programming. Demonstrated ability to build end-to-end projects
-            across game development, automation, and network security, with a strong interest in operating systems,
-            data-driven applications, and real-time systems. Actively involved in leadership and open-source initiatives.
+            Computer Science undergraduate with hands-on experience building AI-powered web applications
+            using Flask and Google Gemini API during an internship at George Oakes Ltd. Strong foundation in Python,
+            data structures, operating systems, and computer networks, with a proven record of shipping end-to-end
+            projects in web development, automation, data analytics, and computer vision.
           </p>
         </div>
         <div className="edu-stack">
@@ -200,6 +200,7 @@ function About() {
             <h3>Mahindra University</h3>
             <p>B.Tech in Computer Science Engineering</p>
             <span className="edu-cgpa">CGPA: 8.41</span>
+            <p className="edu-coursework">Relevant Coursework: Data Structures &amp; Algorithms, Operating Systems, Computer Networks, Database Management, Theory of Computation</p>
           </div>
           <div className="glass-card edu-card reveal reveal-delay-3">
             <div className="edu-year">2022 &ndash; 2024</div>
@@ -207,6 +208,43 @@ function About() {
             <p>Higher Secondary Education</p>
           </div>
         </div>
+      </div>
+    </section>
+  )
+}
+
+function Experience() {
+  return (
+    <section id="experience" className="about-section">
+      <div className="section-header reveal">
+        <p className="section-label">Experience</p>
+        <h2 className="section-heading">Where I've worked</h2>
+      </div>
+      <div className="glass-card reveal" style={{ marginBottom: '24px' }}>
+        <div className="project-header">
+          <span className="project-date">June 2026 &ndash; July 2026</span>
+          <span className="project-tech">George Oakes Ltd, Chennai</span>
+        </div>
+        <h3 className="project-title">AI Intern for HR</h3>
+        <p style={{ fontSize: '14px', color: 'var(--text-muted)', marginBottom: '16px', lineHeight: '1.6' }}>
+          Worked alongside a fellow intern to design and develop AI-powered web applications.
+        </p>
+        <h4 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '8px' }}>GOL Screener &amp; Extractor &ndash; AI Resume Screening Tool</h4>
+        <ul className="project-items">
+          <li>Built an AI-powered resume screening web app using Flask and Google Gemini API that parses PDF resumes, extracts structured candidate data, and screens candidates against job descriptions with match scores, gap analysis, and tailored interview questions</li>
+          <li>Engineered a one-click TSV export feature that copies all 37 extracted candidate fields to the clipboard for direct pasting into Excel tracking sheets</li>
+          <li>Built an SMTP email pipeline that auto-generates formatted screening reports and sends them with the original resume attached to hiring managers</li>
+          <li>Designed a multi-format document processing pipeline using pdfplumber with Tesseract OCR fallback, supporting PDF, DOCX, PNG, JPG, TIFF, and BMP files with parallel batch screening</li>
+          <li>Created a role-based admin panel with manager directory CRUD, user account management, and a timestamped audit trail of every screening</li>
+        </ul>
+        <h4 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '8px', marginTop: '16px' }}>Learning Library &ndash; Role-Based AI Literacy Platform</h4>
+        <ul className="project-items">
+          <li>Developed a multi-company AI literacy platform using Flask, SQLAlchemy, and Google Gemini API serving four companies, 41 job roles across eight departments, and 123+ role-specific lessons</li>
+          <li>Designed a three-tier lesson architecture paired with an AI-generated quiz system that creates 5 MCQs per role with client-side grading and progress tracking</li>
+          <li>Built a comprehensive admin dashboard with CRUD functionality for roles, lessons, resources, categories, and AI course modules</li>
+          <li>Integrated Google Translate with support for 16 Indian languages and persistent language preferences</li>
+          <li>Deployed on Render using Gunicorn and PostgreSQL with a responsive, company-branded interface</li>
+        </ul>
       </div>
     </section>
   )
@@ -241,56 +279,48 @@ function Projects() {
     {
       title: '2D Survival Arena Game',
       date: 'Early 2025',
-      tech: 'Unity, C#',
+      tech: 'Unity, C#, Game Development',
       items: [
-        'Wave-based survival game inspired by Survivor.io',
-        'Enemy AI, collision detection, combat systems',
-        'Modular OOP scripts for entities and spawning',
-        'Optimized for smooth real-time performance',
+        'Developed a 2D wave-based survival game inspired by Survivor.io using Unity and C#, implementing enemy AI, collision detection, combat systems, and player progression mechanics',
+        'Designed modular object-oriented scripts for game entities, spawning systems, and UI management, optimizing gameplay loops to maintain smooth real-time performance during large enemy waves',
       ],
     },
     {
       title: 'Automated File Organization System',
       date: 'Late 2025',
-      tech: 'Bash, Linux Utilities',
+      tech: 'Bash, Linux Utilities, Shell Scripting',
       items: [
-        'MIME-based file classification system',
-        'Metadata extraction and cryptographic hashing',
-        'Cron-based automated scheduling',
-        'Markdown reporting with dependency validation',
+        'Developed a Bash-based file organization system that classifies files using MIME type detection, with metadata extraction, EXIF analysis, and cryptographic hashing',
+        'Integrated cron job scheduling for automated periodic organization, with dependency validation, error handling, and markdown-based reporting',
       ],
     },
     {
-      title: 'League of Legends Match Analytics',
+      title: 'League of Legends Match Analytics Minigame',
       date: 'Mid 2026',
       tech: 'Python, Pandas, Riot API, Streamlit',
       url: 'https://lol-project-amber.vercel.app',
       items: [
-        'Data pipeline for 10,000+ match analysis',
-        '"Higher or Lower" minigame with real stats',
-        'Interactive visualizations and gameplay logic',
+        'Built a data pipeline using the Riot API, analyzing player statistics from over 10,000 League of Legends matches',
+        'Developed a Streamlit-based "Higher or Lower" minigame with interactive visualizations',
       ],
     },
     {
       title: 'ARP Spoofing Detection Tool',
       date: 'Mid 2026',
-      tech: 'Python, Scapy',
+      tech: 'Python, Scapy, Networking',
       items: [
-        'MAC-IP baseline verification detection',
-        'Live packet capture and analysis',
-        'Automated alert system for ARP anomalies',
+        'Implemented ARP spoofing detection using MAC-IP baseline verification, capturing and monitoring live network packets with Scapy',
+        'Designed automated alerts for suspicious ARP table modifications',
       ],
     },
     {
       title: 'Fruit Ninja CV',
       date: 'Mid 2026',
-      tech: 'Python, OpenCV, MediaPipe',
+      tech: 'Python, OpenCV, MediaPipe, NumPy',
       url: 'https://github.com/Nikil-Viswanathan/FruitNinja',
       items: [
-        'Gesture-controlled game with hand tracking',
-        'Real-time finger slicing mechanics',
-        'Physics-based fruit splitting effects',
-        'Persistent high scores with gesture UI',
+        'Developed a gesture-controlled Fruit Ninja clone using Python, OpenCV, and MediaPipe hand tracking',
+        'Implemented real-time finger-gesture slicing, physics-driven fruit splitting, a persistent high-score system, and hover-based restart mechanics',
       ],
     },
   ]
@@ -320,29 +350,34 @@ function Skills() {
       <div className="skills-grid">
         <div className="glass-card skill-card reveal reveal-delay-1">
           <h3>Languages</h3>
-          <p>Python, C, MATLAB, Bash</p>
+          <p>Python, C, HTML, Bash</p>
         </div>
         <div className="glass-card skill-card reveal reveal-delay-2">
-          <h3>Tools / Platforms</h3>
-          <p>Git, Linux, WSL, Cron, VS Code, Unity</p>
+          <h3>Web &amp; Frameworks</h3>
+          <p>Flask, SQLAlchemy, Google Gemini API, pdfplumber, Tesseract OCR, REST APIs, JSON, SMTP</p>
         </div>
         <div className="glass-card skill-card reveal reveal-delay-3">
-          <h3>Libraries</h3>
-          <p>Pandas, Streamlit, Scapy, Riot API</p>
+          <h3>Libraries &amp; Data</h3>
+          <p>Pandas, NumPy, OpenCV, MediaPipe, Streamlit, Scapy, Riot API</p>
         </div>
         <div className="glass-card skill-card reveal reveal-delay-4">
-          <h3>Concepts</h3>
-          <p>Data Structures &amp; Algorithms, Operating Systems, Computer Networks, Theory of Computation</p>
+          <h3>Tools &amp; Platforms</h3>
+          <p>Git, Linux, WSL, PostgreSQL, Gunicorn, Render, Cron, VS Code, Unity</p>
         </div>
       </div>
       <div className="glass-card leadership-card reveal">
-        <h3>Leadership</h3>
+        <h3>Leadership &amp; Activities</h3>
         <ul>
-          <li>Lead E-Sports Head of ENIGMA, the CS Club of Mahindra University</li>
-          <li>Organized tournaments during GameCon 2025 (Valorant, CODM, FIFA, Clash Royale)</li>
-          <li>Organized FIFA tournament during Aeon, the Tech fest of Mahindra University</li>
-          <li>Participated in Hacktoberfest (2024 &amp; 2025) through ENIGMA</li>
+          <li>Lead E-Sports Head of ENIGMA, the Computer Science Club of Mahindra University</li>
+          <li>Organized multiple E-Sports tournaments during GameCon 2025 (Valorant, CODM, FIFA, Clash Royale) and a FIFA tournament during Aeon, the university tech fest</li>
+          <li>Participated in Hacktoberfest 2024 and 2025, contributing to open-source projects using Git and GitHub workflows</li>
         </ul>
+      </div>
+      <div className="glass-card leadership-card reveal" style={{ marginTop: '16px' }}>
+        <h3>Interests</h3>
+        <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: '1.6' }}>
+          Operating Systems, Computer Networks, Computer Vision, Data Analytics, Cybersecurity, Game Development, Open-Source Collaboration
+        </p>
       </div>
     </section>
   )
@@ -363,11 +398,15 @@ function Contact() {
           <span className="contact-label">Email</span>
           <span className="contact-value">nikilv376@gmail.com</span>
         </a>
-        <a href="https://linkedin.com/in/nikil-viswanathan" target="_blank" rel="noopener noreferrer" className="contact-item glass-card reveal reveal-delay-2">
+        <a href="tel:+917358456727" className="contact-item glass-card reveal reveal-delay-2">
+          <span className="contact-label">Phone</span>
+          <span className="contact-value">+91 73584 56727</span>
+        </a>
+        <a href="https://linkedin.com/in/nikil-viswanathan" target="_blank" rel="noopener noreferrer" className="contact-item glass-card reveal reveal-delay-3">
           <span className="contact-label">LinkedIn</span>
           <span className="contact-value">Nikil Viswanathan</span>
         </a>
-        <a href="https://github.com/Nikil-Viswanathan" target="_blank" rel="noopener noreferrer" className="contact-item glass-card reveal reveal-delay-3">
+        <a href="https://github.com/Nikil-Viswanathan" target="_blank" rel="noopener noreferrer" className="contact-item glass-card reveal reveal-delay-4">
           <span className="contact-label">GitHub</span>
           <span className="contact-value">Nikil-Viswanathan</span>
         </a>
@@ -414,6 +453,7 @@ function App() {
         <Navbar dark={dark} onToggle={toggleTheme} />
         <Hero />
         <About />
+        <Experience />
         <Projects />
         <Skills />
         <MonkeytypeWidget />
